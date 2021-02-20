@@ -15,7 +15,7 @@ require_once MODELS . "employeeModel.php";
  */
 function getAllEmployees()
 {
-    //
+    echo 'employee';
 }
 
 /**
@@ -23,7 +23,7 @@ function getAllEmployees()
  */
 function getEmployee($request)
 {
-    //
+    require_once VIEWS . 'employee.php';
 }
 
 /**
