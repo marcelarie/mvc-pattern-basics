@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://achievement-images.teamtreehouse.com/badges-js-angularjs-stage-61.png" width="200"></img>
+</p>
+
 # mvc-pattern-basics
 In this pill you will learn to implement one of the most common architecture 
 patterns and you will practice an example following the MVC standards.
