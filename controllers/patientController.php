@@ -16,7 +16,7 @@ require_once MODELS . "patientModel.php";
 function getAllPatients()
 {
     $patients = get();
-    require_once 'views/employee/employeeDashboard.php';
+    require_once VIEWS. 'patients/patientsDashboard.php';
 }
 
 /**
