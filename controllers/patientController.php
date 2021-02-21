@@ -1,6 +1,6 @@
 <?php
 
-require_once MODELS . "employeeModel.php";
+require_once MODELS . "patientModel.php";
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
 
@@ -13,15 +13,16 @@ require_once MODELS . "employeeModel.php";
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getAllEmployees()
+function getAllPatients()
 {
-    echo 'employee';
+    $patients = get();
+    require_once 'views/employee/employeeDashboard.php';
 }
 
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getEmployee($request)
+function getPatient($request)
 {
     require_once VIEWS . 'employee.php';
 }

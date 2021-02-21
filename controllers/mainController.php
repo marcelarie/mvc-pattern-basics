@@ -1,6 +1,6 @@
 <?php
-require 'employeeController.php';
-require 'travelController.php';
+require 'patientController.php';
+// require 'travelController.php';
 
 function mainController($request)
 {
