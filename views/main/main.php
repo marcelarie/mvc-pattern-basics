@@ -3,5 +3,6 @@
 <form>
     <label>GET ALL EMPLOYEES</label>
     <input name="request" type="text"></input>
+    <input name="id" type="text"></input>
     <button type="submit">GET</button>
 </form>

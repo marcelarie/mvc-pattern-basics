@@ -14,5 +14,12 @@ include 'views/main/main.php';
 require './controllers/mainController.php';
 
 if ($_REQUEST) {
-    mainController(end($_REQUEST));
+    $_REQUEST['id'] ?
+    mainController(
+        $_REQUEST['request'],
+        $_REQUEST['id']
+    ) :
+    mainController(
+        $_REQUEST['request']
+    );
 }

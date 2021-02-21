@@ -22,9 +22,12 @@ function getAllPatients()
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getPatient($request)
+function getPatient($id)
 {
-    require_once VIEWS . 'employee.php';
+    $patients = getById($id);
+    foreach ($patients as $patient) {
+        require_once VIEWS . 'patients/patient.php';
+    }
 }
 
 /**

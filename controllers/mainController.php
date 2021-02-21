@@ -2,7 +2,7 @@
 require 'patientController.php';
 // require 'travelController.php';
 
-function mainController($request)
+function mainController($request, $id = false)
 {
-    $request();
+    $id ? $request($id) : $request();
 }
