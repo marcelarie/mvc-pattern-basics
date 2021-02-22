@@ -11,14 +11,6 @@ function getAll()
     return $result;
 }
 
-/* function delete()
-{
-}
-
-function update()
-{
-} */
-
 function getByResult($resultType)
 {
     $mysqli= new mysqli("localhost", "admin", "1234", "patients");

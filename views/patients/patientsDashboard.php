@@ -8,6 +8,7 @@
                 <th>Gender</th>
                 <th>Age</th>
                 <th>City</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@ foreach ($patients as $patient) {
     echo '<td>'.$patient->gender.'</td>';
     echo '<td>'.$patient->age.'</td>';
     echo '<td>'.$patient->city.'</td>';
+    echo '<td><a class="btn btn-primary" href="index.php?request=getPatient&id='.$patient->id_pat.'">FILE</a></td>';
     echo '</tr>';
 }
 ?>

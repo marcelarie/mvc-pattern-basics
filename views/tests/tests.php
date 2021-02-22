@@ -13,7 +13,7 @@
 foreach ($tests as $test) {
     $testResult = $test->results === "positive" ? "table-danger" : "table-success";
     echo '<tr class='.$testResult.'>';
-    echo '<td>'.$test->id_pat.'</td>';
+    echo '<td><a class="btn btn-outline-primary" href="index.php?request=getPatient&id='.$test->id_pat.'">'.$test->id_pat.'</a></td>';
     echo '<td ><a href="index.php?request=getAllTests&id='.$test->test_type.'">'.$test->test_type.'</a></td>';
     echo '<td>'.$test->results.'</td>';
     echo '<td>'.$test->date_test.'</td>';

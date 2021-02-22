@@ -33,6 +33,5 @@ function getById($id)
     while ($row = $resultObj->fetch_object()) {
         $result[]=$row;
     }
-    echo $result;
     return $result;
 }
