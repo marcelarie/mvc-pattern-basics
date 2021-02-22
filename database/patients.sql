@@ -18,6 +18,7 @@ create table patients (
 create table tests_info (
     test_type varchar(30) not null,
     price int not null,
+    test_description varchar(500) not null,
     PRIMARY KEY(test_type)
 );
 
@@ -86,11 +87,11 @@ values
 ('Denis', 'Cuevas', 'denis@cuevas.com', 'male', 51, 'Madrid'),
 ('Antonio', 'Montiel', 'antonio@montiel.com', 'male', 51, 'Madrid');
 
-insert into tests_info ( test_type, price)
+insert into tests_info ( test_type, price, test_description)
 values
-('PCR', 125),
-('Test Anticuerpo', 15),
-('Test Antigeno', 60);
+('PCR', 125, 'Prueba de diagnóstico que permite detectar un fragmento del material genético de un patógeno'),
+('Test Anticuerpo', 15, 'Prueba de diagnóstico que permite detectar si tienes anticuerpos'),
+('Test Antigeno', 60, 'Prueba detectan antígenos, unas proteínas que se encuentran en la superficie del virus');
 
 insert into tests (id_pat, test_type, results, date_test)
 values
