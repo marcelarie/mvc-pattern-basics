@@ -28,7 +28,9 @@ if ($_REQUEST) {
         $_REQUEST['request']
     );
 }
-    header('location: index.php?request=getAllPatients&id=');
+    if (!$_REQUEST) {
+        header('location: index.php?request=getAllPatients&id=');
+    }
 ?>
 </body>
 </html>

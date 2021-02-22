@@ -16,6 +16,20 @@ function getPatient($id)
     }
 }
 
+function deletePatient($idsString)
+{
+    $ids = json_decode($idsString);
+    $count = 0;
+    
+    foreach ($ids as $id) {
+        if (delete($id)) {
+            $count++;
+        }
+    }
+    $count;
+    require_once VIEWS . 'patients/deletedPatients.php';
+}
+
 function error($errorMsg)
 {
     require_once VIEWS . "/error/error.php";
