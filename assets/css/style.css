@@ -1,3 +1,10 @@
+.patient-modal a {
+    margin-left: 0.5rem;
+}
+.patient-modal span {
+    font-size: 2em;
+}
+
 .absolute-modal {
     position: fixed;
     top: 50%;
@@ -26,7 +33,3 @@
 }
 
 
-@media (max-height: 680px) {
-    .absolute-modal-patient {
-     }
-}
