@@ -1,10 +1,9 @@
 <?php
 require 'patientController.php';
 require 'testsController.php';
-
 // require 'travelController.php';
 
-function mainController($request)
+function mainController($request, $id = false)
 {
-    $request();
+    $id ? $request($id) : $request();
 }
