@@ -27,7 +27,12 @@ function deletePatient($idsString)
         }
     }
     $count;
+    // header('location: index.php?request=getAllPatients&id=');
     require_once VIEWS . 'patients/deletedPatients.php';
+}
+
+function addPatient($patient)
+{
 }
 
 function error($errorMsg)
