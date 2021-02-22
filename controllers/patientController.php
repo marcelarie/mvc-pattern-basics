@@ -11,6 +11,7 @@ function getAllPatients()
 function getPatient($id)
 {
     $patients = getById($id);
+    $tests = getByPatId($id);
     foreach ($patients as $patient) {
         require_once VIEWS . 'patients/patient.php';
     }
