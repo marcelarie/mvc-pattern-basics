@@ -1,4 +1,7 @@
 <div id="patients-dashboard" class="patients-dashboard">
+<div class="d-grid gap-2">
+  <a class="btn btn-success" type="button" href="">NEW PATIENT</a>
+</div>
     <table class="table">
         <thead class="table-dark">
             <tr>
