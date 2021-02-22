@@ -7,8 +7,8 @@ echo '<div class="alert absolute-modal">
                 <a class="btn-close" href="index.php?request=getAllTests&id="></a>
               </div>
               <div class="modal-body">
-                <p>'.$testInfo[0]->description.'</p>
-                <p>'.$testInfo[0]->price.'</p>
+                <p>'.$testInfo[0]->test_description.'</p>
+                <p>'.$testInfo[0]->price.' €</p>
               </div>
             </div>
           </div>
