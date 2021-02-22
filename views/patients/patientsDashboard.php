@@ -1,6 +1,6 @@
 <div id="patients-dashboard" class="patients-dashboard">
-    <table>
-        <thead>
+    <table class="table">
+        <thead class="table-dark">
             <tr>
                 <th>Name</th>
                 <th>Last name</th>
