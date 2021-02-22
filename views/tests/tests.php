@@ -1,6 +1,6 @@
 <?php
     echo '<div id="patients-dashboard" class="patients-dashboard">
-    <table>
+    <table class="table table-primary">
         <thead>
             <tr>
                 <th>id</th>
@@ -12,7 +12,8 @@
         </thead>
         <tbody>';
 foreach ($tests as $test) {
-    echo '<tr>';
+    $testResult = $test->results === "positive" ? "table-danger" : "table-success";
+    echo '<tr class='.$testResult.'>';
     echo '<td>'.$test->id_test.'</td>';
     echo '<td>'.$test->id_pat.'</td>';
     echo '<td>'.$test->test_type.'</td>';

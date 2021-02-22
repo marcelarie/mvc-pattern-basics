@@ -23,9 +23,8 @@ function getAllTests()
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getAllResult()
+function getAllResult($result)
 {
-    $result = 'negative';
     $tests = getByResult($result);
     require_once 'views/tests/tests.php';
 }
@@ -33,9 +32,8 @@ function getAllResult()
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getAllType()
+function getAllType($type)
 {
-    $type = 'PCR';
     $tests = getByType($type);
     require_once 'views/tests/tests.php';
 }
