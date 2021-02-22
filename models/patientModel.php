@@ -11,8 +11,14 @@ function get()
     return $result;
 }
 
-function delete()
+function delete($id)
 {
+    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    $deleteById = 'DELETE FROM patients WHERE id_pat ='.$id;
+    $resultObj = $mysqli->query($deleteById);
+
+    $result = $mysqli -> affected_rows;
+    return $result;
 }
 
 function update()
