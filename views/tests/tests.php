@@ -1,28 +1,31 @@
-<?php
-    echo '<div id="patients-dashboard" class="patients-dashboard">
-    <table>
-        <thead>
+<div id="test-dashboard" class="test-dashboard">
+    <table class="table table-primary">
+        <thead class="table-dark">
             <tr>
-                <th>id</th>
                 <th>Patient id</th>
                 <th>Type</th>
                 <th>Result</th>
                 <th>Date</th>
             </tr>
         </thead>
-        <tbody>';
+        <tbody>
+<?php
 foreach ($tests as $test) {
-    echo '<tr>';
-    echo '<td>'.$test->id_test.'</td>';
-    echo '<td>'.$test->id_pat.'</td>';
-    echo '<td>'.$test->test_type.'</td>';
+    $testResult = $test->results === "positive" ? "table-danger" : "table-success";
+    echo '<tr class='.$testResult.'>';
+    echo '<td><a class="btn btn-outline-primary" href="index.php?request=getPatient&id='.$test->id_pat.'">'.$test->id_pat.'</a></td>';
+    echo '<td ><a href="index.php?request=getAllTests&id='.$test->test_type.'">'.$test->test_type.'</a></td>';
     echo '<td>'.$test->results.'</td>';
     echo '<td>'.$test->date_test.'</td>';
     echo '</tr>';
-}
-echo '</tbody>
-</table>
-</div>
-';
-
+};
 ?>
+</tbody>
+</table>
+<?php
+    if ($testInfo) {
+        require VIEWS.'/modal/modal.php';
+    }
+?>
+</div>
+

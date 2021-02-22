@@ -1,0 +1,32 @@
+.absolute-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute-modal-patient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.float-right { 
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.modal-main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.modal-img {
+    padding: 1rem;
+}
+
+
+@media (max-height: 680px) {
+    .absolute-modal-patient {
+     }
+}
