@@ -35,3 +35,14 @@ function getById($id)
     }
     return $result;
 }
+
+function getByPatId($patId)
+{
+    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    $selectAll = 'SELECT * FROM tests WHERE id_pat="'.$patId.'"';
+    $resultObj = $mysqli->query($selectAll);
+    while ($row = $resultObj->fetch_object()) {
+        $result[]=$row;
+    }
+    return $result;
+}

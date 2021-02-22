@@ -48,6 +48,8 @@ function getTestInfo($type)
     require_once 'views/tests/testsInfo.php';
 }
 
+
+
 /**
  * This function includes the error view with a message
  */

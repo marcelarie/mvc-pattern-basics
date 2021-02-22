@@ -15,6 +15,7 @@
 .float-right { 
     float: right;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .modal-main {
@@ -25,7 +26,14 @@
     padding: 1rem;
 }
 
-
+#patientTestTable {
+    margin: 0 20px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-height: 680px) {
     .absolute-modal-patient {
      }
