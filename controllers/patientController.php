@@ -11,6 +11,7 @@ function getAllPatients()
 function getPatient($id)
 {
     $patients = getById($id);
+    $tests = getByPatId($id);
     foreach ($patients as $patient) {
         require_once VIEWS . 'patients/patient.php';
     }
@@ -27,7 +28,12 @@ function deletePatient($idsString)
         }
     }
     $count;
+    // header('location: index.php?request=getAllPatients&id=');
     require_once VIEWS . 'patients/deletedPatients.php';
+}
+
+function addPatient($patient)
+{
 }
 
 function error($errorMsg)

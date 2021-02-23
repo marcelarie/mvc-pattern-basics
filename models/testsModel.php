@@ -44,3 +44,5 @@ function getTypeInfo($type)
     }
     return $result;
 }
+
+
