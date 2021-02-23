@@ -1,0 +1,48 @@
+.modal-patient span {
+    font-size: 1.5em;
+}
+
+.absolute-modal-patient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.patient-modal a {
+    margin-left: 0.5rem;
+}
+.patient-modal span {
+    font-size: 2em;
+}
+
+#patientTestTable {
+    margin: 0 20px;
+}
+
+/* patient modal inputs */
+.modal-patient input:disabled {
+    all: unset;
+}
+
+.modal-patient input {
+    width: 70%;
+}
+
+.modal-patient .card-title, 
+.modal-patient .card-title:disabled {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal-patient__edit {
+    position:absolute;
+    right: 0;
+}
+
+.modal-patient__inputs {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 0;
+    text-align: center;
+}
