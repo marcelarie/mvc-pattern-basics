@@ -1,5 +1,5 @@
 <?php
-
+include_once "config/constants.php";
 require_once MODELS . "patientModel.php";
 
 function getAllPatients()
@@ -8,10 +8,14 @@ function getAllPatients()
     require_once VIEWS. 'patients/patientsDashboard.php';
 }
 
-function getPatient($id)
+function getPatient($idsString)
 {
-    $patients = getById($id);
-    $tests = getByPatId($id);
+    $ids = json_decode($idsString);
+
+    $edit = $ids[1];
+    
+    $patients = getById($ids[0]);
+    $tests = getByPatId($ids[0]);
     foreach ($patients as $patient) {
         require_once VIEWS . 'patients/patient.php';
     }
@@ -32,8 +36,16 @@ function deletePatient($idsString)
     require_once VIEWS . 'patients/deletedPatients.php';
 }
 
-function addPatient($patient)
+function updatePatient($data)
 {
+    $result = update($data);
+    require_once VIEWS . 'patients/updatePatient.php';
+}
+
+function addPatient($data)
+{
+    $result = add($data);
+    require_once VIEWS . 'patients/addPatient.php';
 }
 
 function error($errorMsg)
