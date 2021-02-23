@@ -1,7 +1,8 @@
 <pre>
 <?php
-    print_r($_REQUEST);
-    print_r($_REQUEST);
-    print_r($_POST);
+include_once "config/constants.php";
+require CONTROLLERS .'mainController.php';
+
+mainController('addPatient', $_REQUEST);
 ?>
 </pre>

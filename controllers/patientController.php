@@ -1,5 +1,5 @@
 <?php
-
+include_once "config/constants.php";
 require_once MODELS . "patientModel.php";
 
 function getAllPatients()
@@ -32,8 +32,10 @@ function deletePatient($idsString)
     require_once VIEWS . 'patients/deletedPatients.php';
 }
 
-function addPatient($patient)
+function addPatient($data)
 {
+    $result = add($data);
+    require_once VIEWS . 'patients/addPatient.php';
 }
 
 function error($errorMsg)

@@ -1,5 +1,6 @@
 <?php
 
+
 function get()
 {
     $mysqli= new mysqli("localhost", "admin", "1234", "patients");
@@ -8,6 +9,30 @@ function get()
     while ($row = $resultObj->fetch_object()) {
         $result[]=$row;
     }
+    return $result;
+}
+
+function add($data)
+{
+    function addTicks($item)
+    {
+        return '"'.$item .'"';
+    }
+
+    $data = array_map('addTicks', $data);
+    $commaSeparated = rtrim(implode(',', $data), ',');
+
+    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+
+    $add = " insert into patients 
+    (first_name, last_name, email, gender, age, city)
+    values ({$commaSeparated})";
+
+    echo $add;
+    $resultObj = $mysqli->query($add);
+
+    $result = $mysqli -> affected_rows;
+
     return $result;
 }
 

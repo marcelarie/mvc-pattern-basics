@@ -12,33 +12,33 @@
             </tr>
         </thead>
         <tbody>
-        <form action="../../test.php" id="add-patient" method="POST">
-        <tr>
-            <td>
-                <input type="text" class="form-control" id="add-patient__name" form="add-patient" placeholder="" required>
-            </td>
-            <td>
-                <input type="text" class="form-control" id="add-patient__last-name" form="add-patient" placeholder="" required>
-            </td>                                        
-            <td>                                         
-                <input type="email" class="form-control"id="add-patient__email"  form="add-patient" placeholder="name@example.com" required>
-            </td>                                        
-            <td>                                         
-                <select input type="text" class="form-control" id="add-patient__gender" form="add-patient"  placeholder="" required>
-                    <option value="male">male</option>
-                    <option value="female">female</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" class="form-control" id="add-patient__age" form="add-patient"  placeholder="" required>
-            </td>
-            <td>
-                <input type="text" class="form-control" id="add-patient__city" form="add-patient"  placeholder="" required>
-            </td>
-            <td>
-              <input class="btn btn-success" form="add-patient" type="submit"></input>
-            </td >
-        </tr>
+        <form action="../../index.php" id="add-patient" method="POST">
+            <tr>
+                <td>
+                    <input name="first_name" type="text" class="form-control" id="add-patient__name" form="add-patient" placeholder="" required>
+                </td>
+                <td>
+                    <input name="last_name" type="text" class="form-control" id="add-patient__last-name" form="add-patient" placeholder="" required>
+                </td>                                        
+                <td>                                         
+                    <input name="email" type="email" class="form-control"id="add-patient__email"  form="add-patient" placeholder="name@example.com" required>
+                </td>                                        
+                <td>                                         
+                    <select name="gender" type="text" class="form-control" id="add-patient__gender" form="add-patient"  placeholder="" required>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </td>
+                <td>
+                    <input name="age" type="number" class="form-control" id="add-patient__age" form="add-patient"  placeholder="" required>
+                </td>
+                <td>
+                    <input name="city" type="text" class="form-control" id="add-patient__city" form="add-patient"  placeholder="" required>
+                </td>
+                <td>
+                  <input class="btn btn-success" form="add-patient" type="submit"></input>
+                </td >
+            </tr>
         </form>
 <?php
 foreach ($patients as $patient) {
