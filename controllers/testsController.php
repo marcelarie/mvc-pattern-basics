@@ -14,19 +14,24 @@ require_once MODELS . "testsModel.php";
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
-function getAllTests($type = false)
+/* function getAllTests($type = false)
 {
     $tests = getAll();
     $testInfo = $type ? getTypeInfo($type) : $type;
     require_once 'views/tests/tests.php';
 }
-
+ */
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
 function getAllResult($result)
 {
-    $tests = getByResult($result);
+    $parameters = json_decode($result);
+    $resultFilter = count($parameters) >= 1 ?  $parameters[0] : false;
+    $type = count($parameters) > 1 ? $parameters[1] : $type = false;
+
+    $tests = $resultFilter ? getByResult($resultFilter) : getAll();
+    $testInfo = $type ? getTypeInfo($type) : $type;
     require_once 'views/tests/tests.php';
 }
 
