@@ -7,7 +7,7 @@
                 <a class="nav-link active" aria-current="page" href="index.php?request=getAllPatients&id=">Patients</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?request=getAllTests&id=">Tests</a>
+                <a class="nav-link" href="index.php?request=getAllResult&id=[]">Tests</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Map</a>
