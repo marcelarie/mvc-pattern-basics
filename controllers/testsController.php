@@ -27,8 +27,8 @@ require_once MODELS . "testsModel.php";
 function getAllResult($result)
 {
     $parameters = json_decode($result);
-    count($parameters) === 1 ? $resultFilter = $parameters[0] : $resultFilter = false;
-    count($parameters) > 1 ? $type = $parameters[1] : $type = false;
+    $resultFilter = count($parameters) >= 1 ?  $parameters[0] : false;
+    $type = count($parameters) > 1 ? $parameters[1] : $type = false;
 
     $tests = $resultFilter ? getByResult($resultFilter) : getAll();
     $testInfo = $type ? getTypeInfo($type) : $type;
