@@ -31,7 +31,7 @@ foreach ($tests as $test) {
     };
     echo '<tr class='.$testResult.'>';
     echo '<td><a class="btn btn-outline-primary" href="index.php?request=getPatient&id='.$test->id_pat.'">'.$test->id_pat.'</a></td>';
-    echo '<td ><a href=index.php?request=getAllResult&id=["'.$resultFilter.'",'.json_encode($typeInfo).']>'.$test->test_type.'</a></td>';
+    echo '<td ><a href=index.php?request='.$request.'&id=["'.$resultFilter.'",'.json_encode($typeInfo).']>'.$test->test_type.'</a></td>';
     echo '<td>'.$test->results.'</td>';
     echo '<td>'.$test->date_test.'</td>';
     echo '</tr>';
