@@ -36,6 +36,12 @@ function deletePatient($idsString)
     require_once VIEWS . 'patients/deletedPatients.php';
 }
 
+function updatePatient($data)
+{
+    $result = update($data);
+    require_once VIEWS . 'patients/updatePatient.php';
+}
+
 function addPatient($data)
 {
     $result = add($data);

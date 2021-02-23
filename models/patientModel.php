@@ -46,8 +46,9 @@ function delete($id)
     return $result;
 }
 
-function update()
+function update($data)
 {
+    return $data;
 }
 
 function getById($id)
