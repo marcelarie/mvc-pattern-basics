@@ -12,10 +12,15 @@ function getPatient($idsString)
 {
     $ids = json_decode($idsString);
 
+    // 0 or false -> no edit
+    // 1 or true -> edit
     $edit = $ids[1];
     
+    // get patients by id
     $patients = getById($ids[0]);
-    $tests = getByPatId($ids[0]);
+    // get tests by id
+    $tests = getTestsById($ids[0]);
+
     foreach ($patients as $patient) {
         require_once VIEWS . 'patients/patient.php';
     }
@@ -32,7 +37,6 @@ function deletePatient($idsString)
         }
     }
     $count;
-    // header('location: index.php?request=getAllPatients&id=');
     require_once VIEWS . 'patients/deletedPatients.php';
 }
 
