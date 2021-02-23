@@ -1,4 +1,7 @@
 <?php
+    if ($edit) {
+        print_r($edit);
+    }
 ?>
 
 <div class="card text-white bg-dark mb-3 modal-main ">
@@ -8,12 +11,12 @@
     </div>
     <div class="col-md-8">
       <div class="card-body modal-patient">
-            <a class="btn btn-success float-right" href="index.php?request=deletePatient&id=[<?php echo $patient->id_pat; ?>]">EDIT</a>
-            <h5 class="card-title"><?php echo $patient->first_name .' '. $patient->last_name ?></h5>
-            <p class="card-text patient-email"><span>📧 </span> <?php echo $patient->email ?></p>
-            <p class="card-text patient-gender"><span>⚥ </span> <?php echo $patient->gender ?></p>
-            <p class="card-text patient-age"><span>🎂 </span> <?php echo $patient->age ?></p>
-            <p class="card-text patient-city"><span>🏙️ </span> <?php echo $patient->city ?></p>
+            <a class="btn btn-success modal-patient__edit float-right" href="index.php?request=getPatient&id=[<?php echo $patient->id_pat . ',' . 1?>]">EDIT</a>
+            <input class="card-title modal-patient__inputs" value="<?php echo $patient->first_name .' '. $patient->last_name ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>
+            <span>📧 </span><input class="card-text modal-patient__inputs patient-email" value="<?php echo $patient->email ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>
+            <span>⚥ </span><input class="card-text modal-patient__inputs patient-gender" value="<?php echo $patient->gender ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>
+            <span>🎂 </span><input class="card-text modal-patient__inputs patient-age" value="<?php echo $patient->age ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>
+            <span>🏙️ </span><input class="card-text modal-patient__inputs patient-city" value="<?php echo $patient->city ?>" <?php echo $edit ? '' : 'disabled'; ?>></input>
       </div>
     </div>
   </div>

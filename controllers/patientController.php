@@ -8,10 +8,14 @@ function getAllPatients()
     require_once VIEWS. 'patients/patientsDashboard.php';
 }
 
-function getPatient($id)
+function getPatient($idsString)
 {
-    $patients = getById($id);
-    $tests = getByPatId($id);
+    $ids = json_decode($idsString);
+    
+    
+    
+    $patients = getById($ids[0]);
+    $tests = getByPatId($ids[0]);
     foreach ($patients as $patient) {
         require_once VIEWS . 'patients/patient.php';
     }

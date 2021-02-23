@@ -49,7 +49,7 @@ foreach ($patients as $patient) {
     echo '<td>'.$patient->gender.'</td>';
     echo '<td>'.$patient->age.'</td>';
     echo '<td>'.$patient->city.'</td>';
-    echo '<td><a class="btn btn-primary" href="index.php?request=getPatient&id='.$patient->id_pat.'">FILE</a></td>';
+    echo '<td><a class="btn btn-primary" href="index.php?request=getPatient&id=['.$patient->id_pat.', 0]">FILE</a></td>';
     echo '</tr>';
 }
 ?>
