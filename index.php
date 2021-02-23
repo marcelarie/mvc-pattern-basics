@@ -15,22 +15,28 @@
 <?php
 include_once "config/constants.php";
 
-include 'views/main/main.php';
-require './controllers/mainController.php';
+include VIEWS . 'main/main.php';
+require CONTROLLERS . 'mainController.php';
 
 if ($_REQUEST) {
-    $_REQUEST['id'] ?
-    mainController(
-        $_REQUEST['request'],
-        $_REQUEST['id']
-    ) :
-    mainController(
-        $_REQUEST['request']
-    );
-}
-    if (!$_REQUEST) {
-        header('location: index.php?request=getAllPatients&id=');
+    if ($_REQUEST['first_name']) {
+        mainController('addPatient', $_REQUEST);
+    } else {
+        $_REQUEST['id'] ?
+        mainController(
+            $_REQUEST['request'],
+            $_REQUEST['id']
+        ) :
+        mainController(
+            $_REQUEST['request']
+        );
     }
+}
+
+
+if (!$_REQUEST) {
+    header('location: index.php?request=getAllPatients&id=');
+}
 ?>
 </body>
 </html>
