@@ -1,7 +1,6 @@
 <?php
     $tag = $edit ? 'button' : 'a';
     $submit = $edit ? 'type=submit' : '';
-    
 ?>
 
 <div class="card text-white bg-dark mb-3 modal-main ">

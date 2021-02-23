@@ -1,5 +1,5 @@
 <?php
-
+require_once HELPERS . "spaces-converter.php";
 require_once MODELS . "patientModel.php";
 require_once MODELS . "testsModel.php";
 
@@ -22,23 +22,10 @@ function getAllType($param)
     $type = count($parameters) > 1 ? $parameters[1] :  false;
     $tests = $typeFilter ? getByType($typeFilter) : getAll();
     $testInfo = $type ? getTypeInfo($type) : $type;
-    $resultFilter = $typeFilter;
-    $resultFilter = convert_url($resultFilter);
+    $resultFilter = spacesConverter($typeFilter, '%20');
     $request = "getAllType";
+
     require_once 'views/tests/tests.php';
-}
-
-function convert_url($resultFilter)
-{
-    if ($resultFilter === "PCR") {
-        $resultFilter === "PCR";
-    } elseif ($resultFilter === "Test Antigeno") {
-        $resultFilter = "Test%20Antigeno";
-    } else {
-        $resultFilter = "Test%20Anticuerpo";
-    };
-
-    return $resultFilter;
 }
 
 function getTestInfo($type)

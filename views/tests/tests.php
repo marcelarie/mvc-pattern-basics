@@ -1,5 +1,6 @@
 <?php
-require_once VIEWS . 'tests/testFilter.php'
+require_once HELPERS . "spaces-converter.php";
+require_once VIEWS . 'tests/testFilter.php';
 ?>
 <div id="test-dashboard" class="test-dashboard">
     <table class="table table-primary">
@@ -19,7 +20,7 @@ $resultFilter = $resultFilter ? '"'.$resultFilter.'"' : "\"\"";
 foreach ($tests as $test) {
     $testResult = $test->results === "positive" ? "table-danger" : "table-success";
 
-    $typeInfo = json_encode(preg_replace('/\s+/', '%20', $test->test_type)); // change spaces for %20
+    $typeInfo = json_encode(spacesConverter($test->test_type, '%20')); // change spaces for %20
 
     echo "<tr class={$testResult}>";
     echo "<td><a class='btn btn-outline-primary' href='index.php?request=getPatient&id='{$test->id_pat}'>{$test->id_pat}</a></td>";

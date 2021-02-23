@@ -2,16 +2,17 @@
 
 require './database/connect-database.php';
 
-$mysqli = connectToDatabase();
 
 function get()
 {
     global $mysqli;
+
     $selectAll = 'SELECT * FROM patients';
     $resultObj = $mysqli->query($selectAll);
     while ($row = $resultObj->fetch_object()) {
         $result[]=$row;
     }
+
     return $result;
 }
 

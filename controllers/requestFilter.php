@@ -3,7 +3,7 @@
 function requestFilter()
 {
     if ($_REQUEST) {
-        if ($_REQUEST['first_name']) {
+        if (isset($_REQUEST['first_name'])) {
             if ($_REQUEST['last_name']) {
                 mainController('addPatient', $_REQUEST);
             } else {
