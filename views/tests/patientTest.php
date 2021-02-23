@@ -9,6 +9,7 @@
         </thead>
         <tbody>
 <?php
+// Test rows
 foreach ($tests as $test) {
     $testResult = $test->results === "positive" ? "table-danger" : "table-success";
     echo '<tr class='.$testResult.'>';
