@@ -14,3 +14,6 @@ define("MODELS", BASE_PATH . '/models/');
 
 //RESOURCES
 define("RESOURCES", BASE_PATH . '/resources/');
+
+//HELPERS
+define("HELPERS", BASE_PATH . '/helpers/');

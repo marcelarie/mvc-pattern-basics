@@ -1,6 +1,6 @@
 
 <?php
-echo $count;
+// echo $count;
 header('location: index.php?request=getAllPatients&id=');
 ?>
 

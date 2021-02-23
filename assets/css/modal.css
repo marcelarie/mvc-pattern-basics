@@ -1,0 +1,19 @@
+
+.absolute-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* modal */
+.modal-main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.modal-img {
+    padding: 1rem;
+}
+
+

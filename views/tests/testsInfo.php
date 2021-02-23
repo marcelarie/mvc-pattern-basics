@@ -13,9 +13,3 @@ echo '<div class="modal fade" id="testInfoModal" tabindex="-1" aria-hidden="true
             </div>
         </div>
     </div>';
-    /* echo '<div id="test-info" class="test-info">
-    <h2>'.$info[0]->test_type.'</h2>
-    <p>'.$info[0]->price.'</p>
-    <p>'.$info[0]->description.'</p>
-</div>'; */
-?>

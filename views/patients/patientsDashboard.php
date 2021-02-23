@@ -8,7 +8,7 @@
                 <th>Gender</th>
                 <th>Age</th>
                 <th>City</th>
-                <th></th>
+                <th><!-- empty on purpose --></th>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
                     <input name="email" type="email" class="form-control"id="add-patient__email"  form="add-patient" placeholder="name@example.com" required>
                 </td>                                        
                 <td>                                         
-                    <select name="gender" type="text" class="form-control" id="add-patient__gender" form="add-patient"  placeholder="" required>
+                    <select name="gender" type="text" class="form-control dashboard-select" id="add-patient__gender" form="add-patient"  placeholder="" required>
                         <option value="male">male</option>
                         <option value="female">female</option>
                     </select>
@@ -41,6 +41,7 @@
             </tr>
         </form>
 <?php
+// Patient rows
 foreach ($patients as $patient) {
     echo '<tr>';
     echo '<td>'.$patient->first_name.'</td>';

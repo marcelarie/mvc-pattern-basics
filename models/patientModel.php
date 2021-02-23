@@ -1,19 +1,25 @@
 <?php
 
+require './database/connect-database.php';
+
 
 function get()
 {
-    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    global $mysqli;
+
     $selectAll = 'SELECT * FROM patients';
     $resultObj = $mysqli->query($selectAll);
     while ($row = $resultObj->fetch_object()) {
         $result[]=$row;
     }
+
     return $result;
 }
 
 function add($data)
 {
+    global $mysqli;
+
     function addTicks($item)
     {
         return '"'.$item .'"';
@@ -22,7 +28,6 @@ function add($data)
     $data = array_map('addTicks', $data);
     $commaSeparated = rtrim(implode(',', $data), ',');
 
-    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
 
     $add = " insert into patients 
     (first_name, last_name, email, gender, age, city)
@@ -38,7 +43,8 @@ function add($data)
 
 function delete($id)
 {
-    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    global $mysqli;
+
     $deleteById = 'DELETE FROM patients WHERE id_pat ='.$id;
     $resultObj = $mysqli->query($deleteById);
 
@@ -47,9 +53,10 @@ function delete($id)
 
 function update($data)
 {
+    global $mysqli;
+
     $data = json_decode(json_encode($data));
     $name = explode(' ', $data->first_name);
-    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
     $updatePatient = "UPDATE patients SET first_name = '{$name[0]}', last_name = '{$name[1]}', email = '{$data->email}', gender = '{$data->gender}', city = '{$data->city}', age = '{$data->age}' WHERE id_pat = {$data->id_pat}";
 
     $mysqli->query($updatePatient);
@@ -60,7 +67,8 @@ function update($data)
 
 function getById($id)
 {
-    $mysqli = new mysqli("localhost", "admin", "1234", "patients");
+    global $mysqli;
+
     $selectById = 'SELECT * FROM patients where id_pat = '.$id;
     $resultObj = $mysqli->query($selectById);
     while ($row = $resultObj->fetch_object()) {
@@ -69,9 +77,10 @@ function getById($id)
     return $result;
 }
 
-function getByPatId($patId)
+function getTestsById($patId)
 {
-    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    global $mysqli;
+
     $selectAll = 'SELECT * FROM tests WHERE id_pat="'.$patId.'"';
     $resultObj = $mysqli->query($selectAll);
     while ($row = $resultObj->fetch_object()) {
