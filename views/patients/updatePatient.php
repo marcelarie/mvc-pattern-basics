@@ -1,4 +1,2 @@
-
-<pre>
-<?php print_r($result); ?>
-</pre>
+<?php
+header('location: index.php?request=getAllPatients&id=');

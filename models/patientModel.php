@@ -43,12 +43,19 @@ function delete($id)
     $resultObj = $mysqli->query($deleteById);
 
     $result = $mysqli -> affected_rows;
-    return $result;
 }
 
 function update($data)
 {
-    return $data;
+    $data = json_decode(json_encode($data));
+    $name = explode(' ', $data->first_name);
+    $mysqli= new mysqli("localhost", "admin", "1234", "patients");
+    $updatePatient = "UPDATE patients SET first_name = '{$name[0]}', last_name = '{$name[1]}', email = '{$data->email}', gender = '{$data->gender}', city = '{$data->city}', age = '{$data->age}' WHERE id_pat = {$data->id_pat}";
+
+    $mysqli->query($updatePatient);
+
+    $result = $mysqli -> affected_rows;
+    return $result;
 }
 
 function getById($id)

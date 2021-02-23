@@ -12,6 +12,7 @@
     <div class="col-md-8">
       <div class="card-body modal-patient">
         <form action="../../index.php" id="update-patient" method="POST">
+        <input name='id_pat' value='<?php echo $patient->id_pat ?>' class="none"></input>
         <<?php echo $tag ?> <?php echo $submit ?> form='update-patient' class="btn btn-success modal-patient__edit float-right" href="index.php?request=getPatient&id=[<?php echo $patient->id_pat . ',' . 1?>]">EDIT</<?php echo $tag; ?>>
             <input name="first_name" class="card-title modal-patient__inputs" value="<?php echo $patient->first_name .' '. $patient->last_name ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>
             <span>📧 </span><input name="email"  class="card-text modal-patient__inputs patient-email" value="<?php echo $patient->email ?>" <?php echo $edit ? '' : 'disabled'; ?>></input><br>

@@ -4,6 +4,7 @@
 
 
 
+
 .absolute-modal {
     position: fixed;
     top: 50%;
@@ -121,4 +122,8 @@ input[type=number] {
     border-radius: 5px;
     padding: 0;
     text-align: center;
+}
+
+.none {
+    display: none;
 }
