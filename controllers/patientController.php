@@ -11,8 +11,8 @@ function getAllPatients()
 function getPatient($idsString)
 {
     $ids = json_decode($idsString);
-    
-    
+
+    $edit = $ids[1];
     
     $patients = getById($ids[0]);
     $tests = getByPatId($ids[0]);
