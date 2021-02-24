@@ -1,6 +1,9 @@
 <?php
     $tag = $edit ? 'button' : 'a';
     $submit = $edit ? 'type=submit' : '';
+    $origin = $origin ? 'getAllResult' : 'getAllPatients' ;
+
+    echo $origin;
 ?>
 
 <div class="card text-white bg-dark mb-3 modal-main ">
@@ -27,7 +30,7 @@
   ?>
   <div class="flex">
   <a class="btn btn-danger float-right" href="index.php?request=deletePatient&id=[<?php echo $patient->id_pat; ?>]">REMOVE</a>
-  <a class="btn btn-light float-right" href="index.php?request=getAllPatients&id=">BACK</a>
+  <a class="btn btn-light float-right" href="index.php?request=<?php echo $origin; ?>&id=[]">BACK</a>
   </div>
 </div>
 
