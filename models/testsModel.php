@@ -55,3 +55,16 @@ function getTypeInfo($type)
 
     return $result;
 }
+
+function countResult($contition, $filter)
+{
+    echo ($contition . $filter);
+    global $mysqli;
+
+    $count = 'SELECT id_test AS NumberOfTests FROM tests WHERE '.$contition.'="'.$filter.'"';
+    echo ($count);
+    $countResult = $mysqli->query($count);
+    $row_cnt = $countResult->num_rows;
+    print_r ($row_cnt);
+    return $row_cnt;
+}
