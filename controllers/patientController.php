@@ -15,6 +15,9 @@ function getPatient($idsString)
     // 0 or false -> no edit
     // 1 or true -> edit
     $edit = $ids[1];
+    // 0 or false -> origin patients
+    // 1 or true -> origin tests
+    $origin = $ids[2];
     
     // get patients by id
     $patients = getById($ids[0]);
