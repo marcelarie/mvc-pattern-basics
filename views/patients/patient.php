@@ -2,8 +2,6 @@
     $tag = $edit ? 'button' : 'a';
     $submit = $edit ? 'type=submit' : '';
     $origin = $origin ? 'getAllResult' : 'getAllPatients' ;
-
-    echo $origin;
 ?>
 
 <div class="card text-white bg-dark mb-3 modal-main ">

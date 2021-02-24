@@ -1,3 +1,25 @@
+.nav-logo {
+    font-size: 1.5em;
+}
+.nav-logo span {
+    font-weight: 700;
+}
+
+.nav-link {
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    margin-left: 1.5em;
+    color: grey;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.nav-link:hover {
+    background-color: lightgray;
+    color: #282828;
+    transition: 0.1s;
+}
+
 .count {
     float: right;
 }

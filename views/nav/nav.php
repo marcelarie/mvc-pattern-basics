@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a href="index.php?request=getAllPatients&id=" class="navbar-brand nav-logo">COVID MANAGER</a>
+        <a href="index.php?request=getAllPatients&id=" class="navbar-brand nav-logo"><span>COVID</span> MANAGER</a>
         <div class="" id="navbarNavDropdown">
             <ul class="nav">
                 <li class="nav-item nav-button">
