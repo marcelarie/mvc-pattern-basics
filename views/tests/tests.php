@@ -2,6 +2,7 @@
 require_once HELPERS . "spaces-converter.php";
 require_once VIEWS . 'tests/testFilter.php';
 ?>
+
 <div id="test-dashboard" class="test-dashboard">
     <table class="table table-primary">
         <thead class="table-dark">
